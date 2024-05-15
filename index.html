@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Intro component with sign up form</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <section>
+      <div class="introduction">
+        <h2>Learn to code by watching others</h2>
+        <p>
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </div>
+
+      <div class="form-container">
+        <p class="price">
+          <b>Try it free for 7 days</b> then $20/mo. thereafter
+        </p>
+        <form action="" method="post" novalidate>
+          <div class="input">
+            <input
+              type="text"
+              name="first-name"
+              placeholder="First Name"
+              pattern="[\p{L},\.\-'\s]*"
+              maxlength="30"
+              required
+            />
+            <svg
+              class="icon"
+              width="24"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g fill="none" fill-rule="evenodd">
+                <circle fill="#FF7979" cx="12" cy="12" r="12" />
+                <rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1" />
+                <rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1" />
+              </g>
+            </svg>
+            <p class="message"></p>
+          </div>
+          <div class="input">
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              pattern="[\w\.\-\+\/]+@[\w\.\-\+\/]+\.[\w\.\-\+\/]+"
+              maxlength="100"
+              required
+            />
+            <svg
+              class="icon"
+              width="24"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g fill="none" fill-rule="evenodd">
+                <circle fill="#FF7979" cx="12" cy="12" r="12" />
+                <rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1" />
+                <rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1" />
+              </g>
+            </svg>
+            <p class="message"></p>
+          </div>
+          <div class="input-container">
+            <input
+              id="password"
+              type="password"
+              name="password"
+              aria-label="Password"
+              placeholder="Password"
+              pattern="(?=.*[a-z]+)(?=.*[A-Z]+)(?=.*\d)(?=.*\W).{8,40}"
+              maxlength="40"
+              required
+            />
+            <svg
+              class="icon"
+              width="24"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g fill="none" fill-rule="evenodd">
+                <circle fill="#FF7979" cx="12" cy="12" r="12" />
+                <rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1" />
+                <rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1" />
+              </g>
+            </svg>
+            <p id="password-message" class="message"></p>
+          </div>
+          <button type="submit">Claim your free trial</button>
+          <p class="terms-of-service">
+            By clicking the button, you are agreeing to our Terms and Services
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </p>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>

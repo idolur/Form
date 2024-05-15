@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --darker-green: hsl(154, 59%, 45%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+  --white: hsl(0, 0%, 100%);
+  --shadow: 0 0.4rem 0.06rem rgba(var(--dark-blue), 30%);
+  --margin-bottom: clamp(0.8rem, 3vw, 1.1rem);
+  --desktop: 57.2rem;
+  --bg-img: url("/images/bg-intro-desktop.png");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--red) var(--bg-img) no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1.5rem 0;
+  font-family: "Poppins", sans-serif;
+  color: var(--white);
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.introduction {
+  flex: 20.6rem;
+  max-width: 31.25rem;
+  align-self: center;
+}
+
+.introduction h2 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.3em;
+  margin-bottom: 1.5rem;
+}
+
+.form-container {
+  max-width: 29.52875rem;
+}
+
+.price {
+  background-color: var(--blue);
+  padding: 1rem min(4.5rem, 13.5vw);
+  border-radius: 0.5rem;
+  margin-bottom: 1.2rem;
+  box-shadow: var(--shadow);
+}
+
+form {
+  padding: clamp(1rem, 5vw, 2rem);
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+}
+
+form input,
+form button {
+  display: block;
+  width: 100%;
+  border-radius: 0.3rem;
+}
+
+.input {
+  display: grid;
+  margin-bottom: var(--margin-bottom);
+}
+
+input {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+  font-family: inherit;
+  font-weight: 600;
+  padding: 1em 3.5em 1em 1em;
+  border: 1px solid rgba(var(--grayish-blue), 70%);
+}
+
+input:hover {
+  background-color: rgba(var(--grayish-blue), 10%);
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 1px 1px rgba(var(--dark-blue), 50%);
+}
+
+input.invalid {
+  border: 2px solid var(--red);
+}
+
+input.invalid:focus {
+  box-shadow: 0 0 1px 1px var(--red);
+}
+
+input.invalid::placeholder {
+  color: var(--red);
+}
+
+.icon,
+.message {
+  display: none;
+}
+
+.password-constraint.message,
+.error.message {
+  display: block;
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  font-size: 0.7rem;
+  font-weight: 500;
+  line-height: normal;
+  text-align: right;
+  margin-top: 0.3em;
+  white-space: pre-wrap;
+}
+
+.error.icon {
+  display: block;
+  grid-column: 2;
+  grid-row: 1;
+  place-self: center end;
+  margin-right: 1rem;
+}
+
+.password-constraint.message {
+  color: var(--dark-blue);
+}
+
+.error.message {
+  color: var(--red);
+  font-style: italic;
+}
+
+button {
+  background-color: var(--green);
+  color: var(--white);
+  border: transparent;
+  margin-bottom: var(--margin-bottom);
+  padding: 1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  box-shadow: 0 0.3rem var(--darker-green);
+  line-height: 1.1rem;
+}
+
+button:hover {
+  background-color: hsl(154, 59%, 45%); 
+}
+
+button:active {
+  transform: scale(0.98);
+  box-shadow: 0 0.2rem var(--darker-green);
+}
+
+.terms-of-service {
+  color: var(--grayish-blue);
+  font-size: 0.7rem;
+  line-height: 1.7em;
+}
+
+.terms-of-service a {
+  color: var(--red);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.terms-of-service a:hover {
+  color: rgba(var(--red), 70%);
+}
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
